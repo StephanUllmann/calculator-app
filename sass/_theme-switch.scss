@@ -1,0 +1,114 @@
+.theme {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  //   position: relative;
+
+  &__switch-bg {
+    position: absolute;
+    width: 7rem;
+    height: 2.5rem;
+    background-color: var(--color-bg-sec);
+    border-radius: 23rem;
+    bottom: -0.75rem;
+    left: -0.5rem;
+    z-index: 1;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: end;
+    gap: 2.5rem;
+
+    &-group {
+      width: 6rem;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 0.5rem;
+      position: relative;
+    }
+
+    &__radio-group {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &__radio-input {
+      //   visibility: hidden;
+      z-index: 13;
+      appearance: none;
+      border: none;
+      height: 1.9rem;
+      width: 1.9rem;
+      border-radius: 50%;
+      transform: translateY(0.4rem);
+
+      &:checked {
+        background-color: var(--color-key-toggle-bg);
+      }
+    }
+
+    &__radio-label {
+      color: var(--color-text-disp--1);
+      font-size: 1.25rem;
+      position: relative;
+    }
+
+    &__radio-btn {
+      height: 2rem;
+      width: 2rem;
+      //   outline: 1px solid var(--color-key-toggle-bg);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 20;
+      bottom: -2.8rem;
+      left: -0.6rem;
+      //   opacity: 0.5;
+      //   visibility: hidden;
+
+      &::after {
+        content: "";
+        height: 1.9rem;
+        width: 1.9rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-key-toggle-bg);
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+
+      //   &--1 {
+      //     left: -0.25rem;
+      //   }
+
+      //   &--2 {
+      //     left: 2rem;
+      //   }
+
+      //   &--3 {
+      //     left: 4.3rem;
+      //   }
+    }
+  }
+
+  &__text {
+    color: var(--color-text-disp--1);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    align-self: flex-end;
+  }
+}
+
+// &__radio-input:checked ~ &__radio-label &__radio-button::after {
+//   opacity: 1;
+// }
+
+.theme__form__radio-input:checked
+  ~ .theme__form__radio-label
+  .theme__form__radio-btn {
+  opacity: 1;
+}

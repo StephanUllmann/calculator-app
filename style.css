@@ -1,0 +1,330 @@
+:root {
+  --color-bg-main: var(--color-bg-main--1);
+  --color-bg-sec: var(--color-bg-sec--1);
+  --color-bg-screen: var(--color-bg-screen--1);
+  --color-key-back-bg: var(--color-key-back-bg--1);
+  --color-key-back-shadow: var(--color-key-back-shadow--1);
+  --color-key-toggle-bg: var(--color-key-toggle-bg--1);
+  --color-key-toggle-shadow: var(--color-key-toggle-shadow--1);
+  --color-key-main-bg: var(--color-key-main-bg--1);
+  --color-key-main-shadow: var(--color-key-main-shadow--1);
+  --color-text-nums: var(--color-text-nums--1);
+  --color-text-disp: var(--color-text-disp--1);
+  --color-text-back: var(--color-text-back--1);
+  --color-text-equals: var(--color-text-equals--1);
+  --color-bg-main--1: rgb(58, 71, 100);
+  --color-bg-sec--1: rgb(35, 44, 67);
+  --color-bg-screen--1: rgb(24, 32, 52);
+  --color-key-back-bg--1: rgb(99, 112, 151);
+  --color-key-back-shadow--1: hsl(224, 28%, 35%);
+  --color-key-toggle-bg--1: rgb(208, 63, 47);
+  --color-key-toggle-shadow--1: rgb(147, 38, 26);
+  --color-key-main-bg--1: rgb(234, 227, 220);
+  --color-key-main-shadow--1: rgb(180, 165, 151);
+  --color-text-nums--1: rgb(68, 75, 90);
+  --color-text-disp--1: rgb(255, 255, 255);
+  --color-text-back--1: rgb(255, 255, 255);
+  --color-text-equals--1: rgb(255, 255, 255);
+  --color-bg-main--2: hsl(0, 0%, 90%);
+  --color-bg-sec--2: hsl(0, 5%, 81%);
+  --color-bg-screen--2: hsl(0, 0%, 93%);
+  --color-key-back-bg--2: hsl(185, 42%, 37%);
+  --color-key-back-shadow--2: hsl(185, 58%, 25%);
+  --color-key-toggle-bg--2: hsl(25, 98%, 40%);
+  --color-key-toggle-shadow--2: hsl(25, 99%, 27%);
+  --color-key-main-bg--2: hsl(45, 7%, 89%);
+  --color-key-main-shadow--2: hsl(35, 11%, 61%);
+  --color-text-nums--2: hsl(60, 10%, 19%);
+  --color-text-disp--2: hsl(60, 10%, 19%);
+  --color-text-back--2: hsl(0, 0%, 100%);
+  --color-text-equals--2: hsl(0, 0%, 100%);
+  --color-bg-main--3: hsl(268, 75%, 9%);
+  --color-bg-sec--3: hsl(268, 71%, 12%);
+  --color-bg-screen--3: hsl(268, 71%, 12%);
+  --color-key-back-bg--3: hsl(281, 89%, 26%);
+  --color-key-back-shadow--3: hsl(285, 91%, 52%);
+  --color-key-toggle-bg--3: hsl(176, 100%, 44%);
+  --color-key-toggle-shadow--3: hsl(177, 92%, 70%);
+  --color-key-main-bg--3: hsl(268, 47%, 21%);
+  --color-key-main-shadow--3: hsl(290, 70%, 36%);
+  --color-text-nums--3: hsl(52, 100%, 62%);
+  --color-text-disp--3: hsl(52, 100%, 62%);
+  --color-text-back--3: hsl(0, 0%, 100%);
+  --color-text-equals--3: hsl(198, 20%, 13%); }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "League Spartan", sans-serif; }
+
+.container {
+  height: 100svh;
+  position: relative;
+  background-color: #000; }
+
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 67rem;
+  width: 37.5rem;
+  background-color: var(--color-bg-main--1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 2.5rem;
+  justify-content: center;
+  align-content: center;
+  padding: 3rem 2.5rem; }
+  .calculator__name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    color: var(--color-text-disp--1);
+    font-size: 3.2rem;
+    justify-self: start;
+    align-self: end;
+    padding-left: 0.5rem; }
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem; }
+  @media only screen and (max-width: 60em) {
+    .attribution {
+      bottom: 0.25rem;
+      left: 0;
+      right: 0; } }
+
+.theme {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2; }
+  .theme__switch-bg {
+    position: absolute;
+    width: 7rem;
+    height: 2.5rem;
+    background-color: var(--color-bg-sec);
+    border-radius: 23rem;
+    bottom: -0.75rem;
+    left: -0.5rem;
+    z-index: 1; }
+  .theme__form {
+    display: flex;
+    justify-content: end;
+    gap: 2.5rem; }
+    .theme__form-group {
+      width: 6rem;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 0.5rem;
+      position: relative; }
+    .theme__form__radio-group {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 1rem; }
+    .theme__form__radio-input {
+      z-index: 13;
+      appearance: none;
+      border: none;
+      height: 1.9rem;
+      width: 1.9rem;
+      border-radius: 50%;
+      transform: translateY(0.4rem); }
+      .theme__form__radio-input:checked {
+        background-color: var(--color-key-toggle-bg); }
+    .theme__form__radio-label {
+      color: var(--color-text-disp--1);
+      font-size: 1.25rem;
+      position: relative; }
+    .theme__form__radio-btn {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 20;
+      bottom: -2.8rem;
+      left: -0.6rem; }
+      .theme__form__radio-btn::after {
+        content: "";
+        height: 1.9rem;
+        width: 1.9rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-key-toggle-bg);
+        opacity: 0;
+        transition: opacity 0.1s; }
+  .theme__text {
+    color: var(--color-text-disp--1);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    align-self: flex-end; }
+
+.theme__form__radio-input:checked
+~ .theme__form__radio-label
+.theme__form__radio-btn {
+  opacity: 1; }
+
+.screen {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  background-color: var(--color-bg-screen--1);
+  max-width: 45rem;
+  height: clamp(9rem, 9rem, 10.5em);
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .screen__text {
+    display: block;
+    padding: 2.7rem;
+    font-size: 3.9rem;
+    font-weight: 700;
+    color: var(--color-text-disp--1); }
+
+.keypad {
+  background-color: var(--color-bg-sec--1);
+  grid-column: 1/ -1;
+  grid-row: 3 / 4;
+  max-width: 45rem;
+  height: 42rem;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem; }
+  .keypad__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 0.5rem);
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 3.2rem;
+    z-index: 10;
+    position: relative;
+    transition: all 0.2s;
+    cursor: grab; }
+    .keypad__key:active {
+      transform: translateY(0.5rem);
+      cursor: grabbing; }
+      .keypad__key:active:last-child {
+        bottom: 0; }
+    .keypad__key-value {
+      transform: translateY(3px); }
+    .keypad__key--main {
+      background-color: var(--color-key-main-bg);
+      color: var(--color-text-nums); }
+      .keypad__key--main::before {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: inherit;
+        height: 1.1rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 6; }
+      .keypad__key--main::after {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: var(--color-key-main-shadow);
+        height: 1rem;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 5;
+        transition: all 0.2s; }
+      .keypad__key--main:active {
+        filter: brightness(112.5%); }
+    .keypad__key--back {
+      background-color: var(--color-key-back-bg);
+      color: var(--color-text-back);
+      text-transform: uppercase;
+      font-size: 2rem; }
+      .keypad__key--back::before {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: inherit;
+        height: 1.1rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 6; }
+      .keypad__key--back::after {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: var(--color-key-back-shadow);
+        height: 1rem;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 5;
+        transition: all 0.2s; }
+      .keypad__key--back:active {
+        filter: brightness(112.5%); }
+    .keypad__key--equals {
+      background-color: var(--color-key-toggle-bg);
+      color: var(--color-text-equals);
+      font-size: 2rem; }
+      .keypad__key--equals::before {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: inherit;
+        height: 1.1rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 6; }
+      .keypad__key--equals::after {
+        content: "";
+        display: block;
+        width: 100%;
+        background-color: var(--color-key-toggle-shadow);
+        height: 1rem;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        z-index: 5;
+        transition: all 0.2s; }
+      .keypad__key--equals:active {
+        filter: brightness(112.5%); }
+
+[data-val="reset"] {
+  grid-column: 1 / 3; }
+
+[data-val="="] {
+  grid-column: 3 / 5; }
+
+.keypad__key:active::after {
+  transform: translateY(-0.5rem); }

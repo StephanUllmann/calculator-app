@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font;
+}
+
+.container {
+  height: 100svh;
+  position: relative;
+  background-color: #000;
+}
+
+.calculator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 67rem;
+  width: 37.5rem;
+  background-color: var(--color-bg-main--1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, max-content);
+  row-gap: 2.5rem;
+  justify-content: center;
+  align-content: center;
+  padding: 3rem 2.5rem;
+
+  &__name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    color: var(--color-text-disp--1);
+    font-size: $font-size;
+    justify-self: start;
+    align-self: end;
+    padding-left: 0.5rem;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+
+  @media only screen and (max-width: 60em) {
+    bottom: 0.25rem;
+    left: 0;
+    right: 0;
+  }
+}

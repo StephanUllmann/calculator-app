@@ -1,0 +1,128 @@
+////
+/// Colors
+///
+:root {
+  --color-bg-main: var(--color-bg-main--1);
+  --color-bg-sec: var(--color-bg-sec--1);
+  --color-bg-screen: var(--color-bg-screen--1);
+
+  --color-key-back-bg: var(--color-key-back-bg--1);
+  --color-key-back-shadow: var(--color-key-back-shadow--1);
+
+  --color-key-toggle-bg: var(--color-key-toggle-bg--1);
+  --color-key-toggle-shadow: var(--color-key-toggle-shadow--1);
+
+  --color-key-main-bg: var(--color-key-main-bg--1);
+  --color-key-main-shadow: var(--color-key-main-shadow--1);
+
+  --color-text-nums: var(--color-text-nums--1);
+  --color-text-disp: var(--color-text-disp--1);
+  --color-text-back: var(--color-text-back--1);
+  --color-text-equals: var(--color-text-equals--1);
+
+  /// Theme 1
+
+  --color-bg-main--1: rgb(58, 71, 100);
+  --color-bg-sec--1: rgb(35, 44, 67);
+  --color-bg-screen--1: rgb(24, 32, 52);
+
+  --color-key-back-bg--1: rgb(99, 112, 151);
+  --color-key-back-shadow--1: hsl(224, 28%, 35%);
+
+  --color-key-toggle-bg--1: rgb(208, 63, 47);
+  --color-key-toggle-shadow--1: rgb(147, 38, 26);
+
+  --color-key-main-bg--1: rgb(234, 227, 220);
+  --color-key-main-shadow--1: rgb(180, 165, 151);
+
+  --color-text-nums--1: rgb(68, 75, 90);
+  --color-text-disp--1: rgb(255, 255, 255);
+  --color-text-back--1: rgb(255, 255, 255);
+  --color-text-equals--1: rgb(255, 255, 255);
+
+  /// Theme 2
+
+  --color-bg-main--2: hsl(0, 0%, 90%);
+  --color-bg-sec--2: hsl(0, 5%, 81%);
+  --color-bg-screen--2: hsl(0, 0%, 93%);
+
+  --color-key-back-bg--2: hsl(185, 42%, 37%);
+  --color-key-back-shadow--2: hsl(185, 58%, 25%);
+
+  --color-key-toggle-bg--2: hsl(25, 98%, 40%);
+  --color-key-toggle-shadow--2: hsl(25, 99%, 27%);
+
+  --color-key-main-bg--2: hsl(45, 7%, 89%);
+  --color-key-main-shadow--2: hsl(35, 11%, 61%);
+
+  --color-text-nums--2: hsl(60, 10%, 19%);
+  --color-text-disp--2: hsl(60, 10%, 19%);
+  --color-text-back--2: hsl(0, 0%, 100%);
+  --color-text-equals--2: hsl(0, 0%, 100%);
+
+  /// Theme 3
+
+  --color-bg-main--3: hsl(268, 75%, 9%);
+  --color-bg-sec--3: hsl(268, 71%, 12%);
+  --color-bg-screen--3: hsl(268, 71%, 12%);
+
+  --color-key-back-bg--3: hsl(281, 89%, 26%);
+  --color-key-back-shadow--3: hsl(285, 91%, 52%);
+
+  --color-key-toggle-bg--3: hsl(176, 100%, 44%);
+  --color-key-toggle-shadow--3: hsl(177, 92%, 70%);
+
+  --color-key-main-bg--3: hsl(268, 47%, 21%);
+  --color-key-main-shadow--3: hsl(290, 70%, 36%);
+
+  --color-text-nums--3: hsl(52, 100%, 62%);
+  --color-text-disp--3: hsl(52, 100%, 62%);
+  --color-text-back--3: hsl(0, 0%, 100%);
+  --color-text-equals--3: hsl(198, 20%, 13%);
+}
+
+/// Fonts
+
+$font: "League Spartan", sans-serif;
+$font-weight: 700;
+$font-size: 3.2rem;
+
+/// Mixins
+
+@mixin key-bottom($color) {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: inherit;
+    height: 1.1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    z-index: 6;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: $color;
+    height: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    z-index: 5;
+    transition: all 0.2s;
+  }
+}
+
+@mixin brighten {
+  &:active {
+    filter: brightness(112.5%);
+  }
+}

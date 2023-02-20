@@ -1,0 +1,22 @@
+.screen {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  background-color: var(--color-bg-screen--1);
+  max-width: 45rem;
+  height: clamp(9rem, 9rem, 10.5em);
+  border-radius: 1rem;
+
+  margin-top: 1.5rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__text {
+    display: block;
+    padding: 2.7rem;
+    font-size: 3.9rem;
+    font-weight: $font-weight;
+    color: var(--color-text-disp--1);
+  }
+}

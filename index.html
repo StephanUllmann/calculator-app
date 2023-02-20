@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <style>
       .attribution {
         font-size: 11px;
@@ -33,11 +33,132 @@
     </style>
   </head>
   <body>
+    <div class="container">
+      <div class="calculator">
+        <h1 class="calculator__name">calc</h1>
+        <div class="theme">
+          <form action="#" class="theme__form">
+            <h3 class="theme__text">Theme</h3>
+            <div class="theme__form-group">
+              <div class="theme__switch-bg"></div>
+
+              <div class="theme__form__radio-group">
+                <input
+                  type="radio"
+                  class="theme__form__radio-input"
+                  id="theme-1"
+                  name="theme"
+                  checked
+                />
+                <label for="theme-1" class="theme__form__radio-label"
+                  ><span
+                    class="theme__form__radio-btn theme__form__radio-btn--1"
+                  ></span
+                  >1</label
+                >
+              </div>
+              <div class="theme__form__radio-group">
+                <input
+                  type="radio"
+                  class="theme__form__radio-input"
+                  id="theme-2"
+                  name="theme"
+                />
+                <label for="theme-2" class="theme__form__radio-label"
+                  ><span
+                    class="theme__form__radio-btn theme__form__radio-btn--2"
+                  ></span
+                  >2</label
+                >
+              </div>
+              <div class="theme__form__radio-group">
+                <input
+                  type="radio"
+                  class="theme__form__radio-input"
+                  id="theme-3"
+                  name="theme"
+                />
+                <label for="theme-3" class="theme__form__radio-label"
+                  ><span
+                    class="theme__form__radio-btn theme__form__radio-btn--3"
+                  ></span
+                  >3</label
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="screen">
+          <p class="screen__text">399,981</p>
+        </div>
+
+        <div class="keypad">
+          <div class="keypad__key keypad__key--main" data-val="7">
+            <span class="keypad__key-value">7</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="8">
+            <span class="keypad__key-value">8</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="9">
+            <span class="keypad__key-value">9</span>
+          </div>
+          <div class="keypad__key keypad__key--back" data-val="del">
+            <span class="keypad__key-value">del</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="4">
+            <span class="keypad__key-value">4</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="5">
+            <span class="keypad__key-value">5</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="6">
+            <span class="keypad__key-value">6</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="+">
+            <span class="keypad__key-value">+</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="1">
+            <span class="keypad__key-value">1</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="2">
+            <span class="keypad__key-value">2</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="3">
+            <span class="keypad__key-value">3</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="-">
+            <span class="keypad__key-value">-</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val=".">
+            <span class="keypad__key-value">.</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="0">
+            <span class="keypad__key-value">0</span>
+          </div>
+          <div class="keypad__key keypad__key--main data-val="/"><span
+            class="keypad__key-value"
+            >/</span
+          >
+        </div>
+        <div class="keypad__key keypad__key--main" data-val="x">
+          <span class="keypad__key-value">x</span>
+        </div>
+        <div class="keypad__key keypad__key--back" data-val="reset">
+          <span class="keypad__key-value">reset</span>
+        </div>
+        <div class="keypad__key keypad__key--equals" data-val="=">
+          <span class="keypad__key-value">=</span>
+        </div>
+      </div>
+    </div>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Stephan Ullmann</a>.
     </div>
+    <!-- </div> -->
   </body>
 </html>
