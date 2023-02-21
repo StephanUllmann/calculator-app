@@ -270,16 +270,20 @@ const listenForKeyPress = function () {
   });
 };
 
-console.log(
-  themeToggleEl.querySelector(".theme__form__radio-input:checked").value
-);
+const checkSysTheme = function () {
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+  if (isDark.matches) {
+    document.body.classList.remove("theme--1");
+    document.body.classList.remove("theme--2");
+    document.body.classList.add("theme--3");
+  }
+};
 
 const listenForThemeToggle = function () {
   themeToggleEl.addEventListener("click", function (e) {
     const radioBtn = e.target.closest("input");
     if (!radioBtn) return;
     const themeNumber = radioBtn.value;
-    console.log(themeNumber);
     document.body.classList.remove("theme--1");
     document.body.classList.remove("theme--2");
     document.body.classList.remove("theme--3");
@@ -289,6 +293,7 @@ const listenForThemeToggle = function () {
 
 const init = function () {
   listenForKeyPress();
+  checkSysTheme();
   listenForThemeToggle();
 };
 

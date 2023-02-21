@@ -19,6 +19,7 @@ body {
   height: 100svh;
   position: relative;
   background-color: var(--color-bg-main);
+  transition: background-color 0.2s;
 }
 
 .calculator {
@@ -36,6 +37,7 @@ body {
   justify-content: center;
   align-content: center;
   padding: 3rem 2.5rem;
+  transition: background-color 0.2s;
 
   &__name {
     grid-column: 1 / 2;

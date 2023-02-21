@@ -60,7 +60,8 @@ body {
 .container {
   height: 100svh;
   position: relative;
-  background-color: var(--color-bg-main); }
+  background-color: var(--color-bg-main);
+  transition: background-color 0.2s; }
 
 .calculator {
   position: absolute;
@@ -76,7 +77,8 @@ body {
   row-gap: 2.5rem;
   justify-content: center;
   align-content: center;
-  padding: 3rem 2.5rem; }
+  padding: 3rem 2.5rem;
+  transition: background-color 0.2s; }
   .calculator__name {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -189,7 +191,8 @@ body {
   margin-top: 1.5rem;
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  transition: background-color 0.2s; }
   .screen__text {
     display: block;
     padding: 2.7rem;
@@ -208,7 +211,8 @@ body {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, minmax(5rem, 10rem));
-  gap: 2rem; }
+  gap: 2rem;
+  transition: background-color 0.2s; }
   @media only screen and (max-width: 75em) {
     .keypad {
       gap: 1.5rem; } }
