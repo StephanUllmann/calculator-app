@@ -53,6 +53,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "League Spartan", sans-serif; }
@@ -109,6 +112,9 @@ body {
       bottom: 0.25rem;
       left: 0;
       right: 0; } }
+  @media only screen and (max-width: 25em) {
+    .attribution {
+      display: none; } }
 
 .theme {
   grid-column: 2 / 3;
@@ -210,7 +216,7 @@ body {
   justify-content: center;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(4, minmax(5rem, 10rem));
+  grid-template-columns: repeat(4, minmax(4rem, 10rem));
   gap: 2rem;
   transition: background-color 0.2s; }
   @media only screen and (max-width: 75em) {

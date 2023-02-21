@@ -10,7 +10,7 @@
   display: grid;
 
   grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(4, minmax(5rem, 10rem));
+  grid-template-columns: repeat(4, minmax(4rem, 10rem));
   gap: 2rem;
   transition: background-color 0.2s;
 
