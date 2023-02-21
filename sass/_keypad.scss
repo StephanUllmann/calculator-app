@@ -1,19 +1,23 @@
 .keypad {
-  background-color: var(--color-bg-sec--1);
+  background-color: var(--color-bg-sec);
   grid-column: 1/ -1;
   grid-row: 3 / 4;
-  max-width: 45rem;
+  // max-width: 45rem;
   height: 42rem;
   padding: 2.5rem;
   border-radius: 1rem;
-
+  justify-content: center;
   display: grid;
 
   grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(5rem, 10rem));
+  gap: 2rem;
   // justify-items: center;
   // align-items: center;
+
+  @media only screen and (max-width: 75em) {
+    gap: 1.5rem;
+  }
 
   &__key {
     display: flex;
@@ -21,7 +25,7 @@
     align-items: center;
     height: calc(100% - 0.5rem);
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     font-size: $font-size;
     z-index: 10;
     position: relative;
@@ -53,7 +57,7 @@
       background-color: var(--color-key-back-bg);
       color: var(--color-text-back);
       text-transform: uppercase;
-      font-size: 2rem;
+      font-size: 2.25rem;
 
       @include key-bottom(var(--color-key-back-shadow));
       @include brighten;
@@ -82,4 +86,24 @@
 
 .keypad__key:active::after {
   transform: translateY(-0.5rem);
+}
+
+.active {
+  filter: brightness(112.5%);
+  transform: translateY(0.5rem);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+    z-index: 5;
+    transition: all 0.2s;
+  }
 }

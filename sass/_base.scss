@@ -18,7 +18,7 @@ body {
 .container {
   height: 100svh;
   position: relative;
-  background-color: #000;
+  background-color: var(--color-bg-main);
 }
 
 .calculator {
@@ -27,8 +27,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 67rem;
-  width: 37.5rem;
-  background-color: var(--color-bg-main--1);
+  min-width: 37.5rem;
+  background-color: var(--color-bg-main);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, max-content);
@@ -40,7 +40,7 @@ body {
   &__name {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    color: var(--color-text-disp--1);
+    color: var(--color-text-disp);
     font-size: $font-size;
     justify-self: start;
     align-self: end;
@@ -49,11 +49,25 @@ body {
 }
 
 .attribution {
+  font-size: 1.1rem;
   position: absolute;
   bottom: 2rem;
   left: 2rem;
+  text-align: center;
+  color: var(--color-text-disp);
 
-  @media only screen and (max-width: 60em) {
+  & > a,
+  & > a:link,
+  & > a:visited {
+    text-decoration: none;
+    color: var(--color-text-disp);
+
+    &:hover {
+      filter: brightness(125%);
+    }
+  }
+
+  @media only screen and (max-width: 75em) {
     bottom: 0.25rem;
     left: 0;
     right: 0;

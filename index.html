@@ -22,17 +22,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <script src="script.js" defer></script>
   </head>
-  <body>
+  <body class="theme--1">
     <div class="container">
       <div class="calculator">
         <h1 class="calculator__name">calc</h1>
@@ -46,43 +38,42 @@
                 <input
                   type="radio"
                   class="theme__form__radio-input"
-                  id="theme-1"
+                  value="1"
                   name="theme"
                   checked
                 />
-                <label for="theme-1" class="theme__form__radio-label"
-                  ><span
+                <label for="theme-1" class="theme__form__radio-label">
+                  <!-- <span
                     class="theme__form__radio-btn theme__form__radio-btn--1"
-                  ></span
-                  >1</label
+                  ></span> -->
+                  1</label
                 >
               </div>
               <div class="theme__form__radio-group">
                 <input
                   type="radio"
                   class="theme__form__radio-input"
-                  id="theme-2"
+                  value="2"
                   name="theme"
                 />
-                <label for="theme-2" class="theme__form__radio-label"
-                  ><span
-                    class="theme__form__radio-btn theme__form__radio-btn--2"
-                  ></span
-                  >2</label
+                <label for="theme-2" class="theme__form__radio-label">
+                  <!-- <span
+                    class="theme__form__radio-btn theme__form__radio-btn--2"></span>  -->
+                  2</label
                 >
               </div>
               <div class="theme__form__radio-group">
                 <input
                   type="radio"
                   class="theme__form__radio-input"
-                  id="theme-3"
+                  value="3"
                   name="theme"
                 />
-                <label for="theme-3" class="theme__form__radio-label"
-                  ><span
+                <label for="theme-3" class="theme__form__radio-label">
+                  <!-- <span
                     class="theme__form__radio-btn theme__form__radio-btn--3"
-                  ></span
-                  >3</label
+                  ></span> -->
+                  3</label
                 >
               </div>
             </div>
@@ -136,29 +127,30 @@
           <div class="keypad__key keypad__key--main" data-val="0">
             <span class="keypad__key-value">0</span>
           </div>
-          <div class="keypad__key keypad__key--main data-val="/"><span
-            class="keypad__key-value"
-            >/</span
-          >
-        </div>
-        <div class="keypad__key keypad__key--main" data-val="x">
-          <span class="keypad__key-value">x</span>
-        </div>
-        <div class="keypad__key keypad__key--back" data-val="reset">
-          <span class="keypad__key-value">reset</span>
-        </div>
-        <div class="keypad__key keypad__key--equals" data-val="=">
-          <span class="keypad__key-value">=</span>
+          <div class="keypad__key keypad__key--main" data-val="/">
+            <span class="keypad__key-value">/</span>
+          </div>
+          <div class="keypad__key keypad__key--main" data-val="x">
+            <span class="keypad__key-value">x</span>
+          </div>
+          <div class="keypad__key keypad__key--back" data-val="reset">
+            <span class="keypad__key-value">reset</span>
+          </div>
+          <div class="keypad__key keypad__key--equals" data-val="=">
+            <span class="keypad__key-value">=</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Stephan Ullmann</a>.
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/StephanUllmann" target="_blank"
+          >Stephan Ullmann</a
+        >.
+      </div>
     </div>
-    <!-- </div> -->
   </body>
 </html>
