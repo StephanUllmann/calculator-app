@@ -276,6 +276,8 @@ const checkSysTheme = function () {
     document.body.classList.remove("theme--1");
     document.body.classList.remove("theme--2");
     document.body.classList.add("theme--3");
+
+    document.getElementById(`rbtn-${themeNumber}`).checked = true;
   }
 };
 
@@ -293,6 +295,7 @@ const listenForThemeToggle = function () {
 
 const init = function () {
   document.querySelector(".container").style.height = `${window.innerHeight}px`;
+
   listenForKeyPress();
   checkSysTheme();
   listenForThemeToggle();
