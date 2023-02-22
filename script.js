@@ -292,6 +292,7 @@ const listenForThemeToggle = function () {
 };
 
 const init = function () {
+  document.querySelector(".container").style.height = `${window.innerHeight}px`;
   listenForKeyPress();
   checkSysTheme();
   listenForThemeToggle();
