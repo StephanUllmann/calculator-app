@@ -277,7 +277,7 @@ const checkSysTheme = function () {
     document.body.classList.remove("theme--2");
     document.body.classList.add("theme--3");
 
-    document.getElementById(`rbtn-${themeNumber}`).checked = true;
+    document.getElementById(`theme-${themeNumber}`).checked = true;
   }
 };
 

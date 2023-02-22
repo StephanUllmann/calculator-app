@@ -61,6 +61,7 @@ body {
   font-family: "League Spartan", sans-serif; }
 
 .container {
+  height: 100svh;
   background-color: var(--color-bg-main);
   transition: background-color 0.2s;
   display: flex;
@@ -118,17 +119,18 @@ body {
   grid-row: 1 / 2; }
   .theme__switch-bg {
     position: absolute;
-    width: 7rem;
+    width: 8rem;
     height: 2.5rem;
     background-color: var(--color-bg-sec);
     border-radius: 23rem;
     bottom: -0.75rem;
-    left: -0.5rem;
+    left: -1rem;
     z-index: 1; }
   .theme__form {
     display: flex;
     justify-content: end;
-    gap: 2.5rem; }
+    gap: 2.5rem;
+    padding-top: 2rem; }
     .theme__form-group {
       width: 6rem;
       display: flex;
@@ -147,13 +149,15 @@ body {
       height: 1.9rem;
       width: 1.9rem;
       border-radius: 50%;
-      transform: translateY(0.4rem); }
+      position: absolute;
+      top: -0.33rem; }
       .theme__form__radio-input:checked {
         background-color: var(--color-key-toggle-bg); }
     .theme__form__radio-label {
       color: var(--color-text-disp);
       font-size: 1.25rem;
-      position: relative; }
+      position: relative;
+      top: -2.5rem; }
     .theme__form__radio-btn {
       height: 2rem;
       width: 2rem;
@@ -179,11 +183,6 @@ body {
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
     align-self: flex-end; }
-
-.theme__form__radio-input:checked
-~ .theme__form__radio-label
-.theme__form__radio-btn {
-  opacity: 1; }
 
 .screen {
   grid-column: 1 / -1;

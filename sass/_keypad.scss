@@ -2,7 +2,6 @@
   background-color: var(--color-bg-sec);
   grid-column: 1/ -1;
   grid-row: 3 / 4;
-  // max-width: 45rem;
   height: 42rem;
   padding: 2.5rem;
   border-radius: 1rem;
@@ -75,12 +74,10 @@
 
 [data-val="reset"] {
   grid-column: 1 / 3;
-  // grid-row: -2 / -1;
 }
 
 [data-val="="] {
   grid-column: 3 / 5;
-  // grid-row: -2 / -1;
 }
 
 .keypad__key:active::after {

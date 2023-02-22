@@ -20,16 +20,12 @@ body {
 }
 
 .container {
-  // height: 100svh;
+  height: 100svh;
   background-color: var(--color-bg-main);
   transition: background-color 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  // @media only screen and (max-width: 27em) {
-  //   display: block;
-  // }
 }
 
 .calculator {
