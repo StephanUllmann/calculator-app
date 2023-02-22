@@ -30,6 +30,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop Version - Theme 1](./Desktop-Theme-1.png)
+![Mobile Version - Theme 3](./Mobile-Theme-3.png)
 
 ### Links
 
@@ -55,17 +56,20 @@ Users should be able to:
 ##### CSS/SCSS:
 
 - ::before and ::after pseudo-elements will stay above its parent element beside their z-idexes
-- - to cover one pseudo-element you'll need another
-- - selecting them for animation is weird
+
+  - to cover one pseudo-element you'll need another
+  - selecting them for animation is weird
 
 - using css custom properties in sacc functions doesn't work
-- - it might with sass interpolation(#{} - syntax), but I didn't figure out how
-- - using filter: brightness() instead
+
+  - it might with sass interpolation(#{} - syntax), but I didn't figure out how
+  - using filter: brightness() instead
 
 - selector by tag attribute (\[data-val="something"\])
 
 - setting the height of the body/main wrapping element depending on viewport height resulted in strange renderings
-- - used JavaScript to set height on window.innerHeight
+
+  - used JavaScript to set height on window.innerHeight
 
 - switching color themes by declaring css classes full of custom properties and adding it to the body via JS
 
