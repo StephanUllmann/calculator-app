@@ -58,11 +58,14 @@ html {
       font-size: 50%; } }
 
 body {
-  font-family: "League Spartan", sans-serif; }
+  font-family: "League Spartan", sans-serif;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-bg-main); }
 
 .container {
-  height: 100svh;
-  background-color: var(--color-bg-main);
   transition: background-color 0.2s;
   display: flex;
   justify-content: center;
@@ -150,7 +153,7 @@ body {
       width: 1.9rem;
       border-radius: 50%;
       position: absolute;
-      top: -0.33rem; }
+      top: -0.31rem; }
       .theme__form__radio-input:checked {
         background-color: var(--color-key-toggle-bg); }
     .theme__form__radio-label {
